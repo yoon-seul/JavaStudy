@@ -8,7 +8,7 @@ public class Main {
         int input = scan.nextInt();
         int count=0;
 
-        for (int i=0;i<input;i++){
+        for (int i=1;i<input+1;i++){
             if (hansu(i)==true)
                 count++;
         }
@@ -24,19 +24,25 @@ public class Main {
         
         if (x<100) {
             return true;
-        }    
-        for (int i=0;i<4;i++){
-            num[i]=x%10;
-            x /= 10;
-            if (x==0)
-                break;
         }
+        else {    
+            for (int i=0;i<4;i++){
+               num[i]=x%10;
+                x /= 10;
+             if (x==0)
+                  break;
+           }
 
-        float average = (num[0]+num[2])/2;
+          float average = (float)(num[0]+num[2])/(float)2;
 
-        if (average==num[1])
-            return true;
+            if (average==(float)num[1])
+                return true;
 
+            if (x==1000)
+                return false;
+
+        }
+    
         return false;
     }
 }
