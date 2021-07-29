@@ -24,8 +24,9 @@ public class Main {
         
         if (x<100) {
             return true;
-        }
-        else {    
+        } else if(x==1000) {
+            return false;
+        }else {    
             for (int i=0;i<4;i++){
                num[i]=x%10;
                 x /= 10;
@@ -38,8 +39,6 @@ public class Main {
             if (average==(float)num[1])
                 return true;
 
-            if (x==1000)
-                return false;
 
         }
     
