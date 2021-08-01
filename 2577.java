@@ -1,3 +1,5 @@
+//BaekJoon #2577 by yoonseul at 210801
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,14 +10,14 @@ public class Main {
         int numB = scan.nextInt();
         int numC = scan.nextInt();
 
-        double[] num = new double[10];
+        long[] num = new long[10];
         int[] fResult = new int[10];
 
         for (int i=0;i<10;i++){
             num[i]=10;
         }
 
-        double result = numA * numB * numC;
+        long result = numA * numB * numC;
 
         for (int i=0;i<10;i++){
             num[i]= result % 10;
@@ -23,6 +25,7 @@ public class Main {
                 break;
             result /= 10;
         }
+
 
         for (int i=0;i<10;i++){
             int count=0;
